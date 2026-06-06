@@ -23,11 +23,15 @@ find_poke <- function(poke_name) {
 #' @return A tibble of matching Pokémon card names and flavor text.
 #' @export
 find_many_pokes <- function(poke_names) {
+
   dat <- load_data()
+
   poke_names <- str_to_title(poke_names)
 
+  pattern <- paste(poke_names, collapse = "|")
+
   dat |>
-    filter(name %in% poke_names) |>
+    filter(str_detect(name, pattern)) |>
     select(name, flavorText) |>
     distinct()
 }

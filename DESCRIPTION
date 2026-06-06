@@ -4,8 +4,8 @@ Title: Toy package for practice activity.
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Kelly", "Bodwin",
-      email = "kbodwin@calpoly.edu",
+      "Amanda", "Iang",
+      email = "aiang@calpoly.edu",
       role = c("aut", "cre")
     )
   )
@@ -20,4 +20,4 @@ Imports:
     readr,
     stringr,
     tidyr
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.0.0
